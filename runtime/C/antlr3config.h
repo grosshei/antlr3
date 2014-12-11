@@ -7,6 +7,14 @@
 /* Define if 64 bit mode required */
 /* #undef ANTLR3_USE_64BIT */
 
+#if defined(__LP64__) && __LP64__
+#define ANTLR3_USE_64BIT
+#else
+#undef ANTLR3_USE_64BIT
+#endif
+
+
+
 /* Define to 1 if you have the `accept' function. */
 #define HAVE_ACCEPT 1
 
